@@ -54,3 +54,9 @@ print(Y + x)
 z = np.arange(3).reshape(3, 1)
 print(z)
 print(Y + z)
+
+# Quiz: create ndarray
+X = np.ones((4, 4)) + np.arange(4)
+print(X)
+X = np.ones((4, 4)) * np.arange(1, 5)
+print(X)
