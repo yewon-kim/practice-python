@@ -21,6 +21,8 @@ print(df)
 print(close.resample('D').sum()) # 각 일의 값 총합
 print(close.resample('W').sum()) # 각 주의 값 총합
 print(close.resample('W').first()) # 각 주의 open 값
+print(close.resample('W').max()) # 각 주의 high 값
+print(close.resample('W').min()) # 각 주의 low 값
 print(close.resample('W').last()) # 각 주의 close 값
 
 print(close.resample('W').ohlc()) # 각 주의 OHLC 값
