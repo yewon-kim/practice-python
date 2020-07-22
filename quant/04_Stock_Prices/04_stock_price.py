@@ -5,8 +5,15 @@ price_df = pd.read_csv(
     names=['ticker', 'date', 'open', 'high', 'low', 'close', 'volume', 'adj_close', 'adj_volume']
 )
 
+# DataFrame
 print(price_df)
-print(price_df.groupby('ticker').median())
 
+# groupby()
+print(price_df.groupby('ticker')) # intermediate object 
+print(price_df.groupby('ticker').median())
+print(price_df.groupby('ticker')['open'].first())
+
+# pivot()
+print(price_df)
 open_prices = price_df.pivot(index='date', columns='ticker', values='open')
-print(open_prices.sort_values(by='date', ascending=False).T)
+print(open_prices)
