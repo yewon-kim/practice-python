@@ -12,10 +12,12 @@ print(close.resample('3D').first())
 df = pd.DataFrame(
     {
         'days': close,
-        'weeks': close.resample('W').first()
+        'weeks': close.resample('W').first() # 각 주 일요일의 첫 번째 종가
     }
 )
 print(df)
+
+# 시계열 데이터 단위 구간별 집계/요약
 print(close.resample('D').sum()) # 각 일의 값 총합
 print(close.resample('W').sum()) # 각 주의 값 총합
 print(close.resample('W').first()) # 각 주의 open 값
