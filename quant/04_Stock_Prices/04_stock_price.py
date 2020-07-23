@@ -11,9 +11,9 @@ print(price_df)
 # groupby()
 print(price_df.groupby('ticker')) # intermediate object 
 print(price_df.groupby('ticker').median())
-print(price_df.groupby('ticker')['open'].first())
+print(price_df.groupby('date')['volume'].sum()) # 일일 총 거래량
+print(price_df.groupby('ticker')['close'].max()) # 종목별 최고 종가
 
 # pivot()
-print(price_df)
 open_prices = price_df.pivot(index='date', columns='ticker', values='open')
 print(open_prices)
