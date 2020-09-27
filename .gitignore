@@ -3,6 +3,8 @@ data_science_venv
 .ipynb_checkpoints
 MNIST_data
 images
+texts
+csv
 
 # files
 *.pth
