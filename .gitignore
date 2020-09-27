@@ -1,3 +1,8 @@
+# folders
 data_science_venv
 .ipynb_checkpoints
 MNIST_data
+images
+
+# files
+*.pth
